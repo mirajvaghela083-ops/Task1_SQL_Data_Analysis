@@ -58,7 +58,8 @@ LIMIT 1;
 
 -- Query 4: Count Students Per Grade
 
-SELECT Grade, COUNT(*) AS Total_Students
+SELECT Grade, 
+       COUNT(*) AS Total_Students
 FROM Students 
 GROUP BY Grade;
 
@@ -108,7 +109,7 @@ LIMIT 1;
 
 SELECT StudentName, MathScore
 FROM Students
-WHERE MathScore > (SELECT  SELECT AVG(MathScore)
+WHERE MathScore > (SELECT AVG(MathScore)
     FROM Students);
 
 -- Query 11: Average age by grade
